@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Admin Panel • Car Rental</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="style2.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+         <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    </head>
+    <body>
+        <form id="form1" runat="server">
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Admin Panel</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Manufacturer</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="Admin-category-create.aspx">Add New Manufacturer</a></li>
+                            <li><a href="Admin-manufacturer-list.aspx">Manage Manufacturer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Cars</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="Admin-index.aspx">Add New Car</a></li>
+                            <li><a href="Admin-car-lists.aspx">Manage Cars</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="Admin-User-Book.aspx">Rentals</a>
+                    </li>
+                    <li>
+                        <a href="../Default.aspx">View Homepage</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="MainPlaceholder" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+     </form>
+</body>
+</html>
